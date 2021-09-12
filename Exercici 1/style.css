@@ -1,0 +1,161 @@
+/* COMENTARIS
+Falta:
+- En Width = 768 px exactes (limit escriptori/ tauleta) es trenca lleugerament l'estructura.
+- Nomenclatura BEM més estructurada
+- Assimilar standards i conceptes de flex millor.
+*/
+
+body {
+  background-color: #aaa;
+  max-width: 1200px;
+  margin: auto; /*per centrar la pagina*/
+}
+header {
+  background-color: #222;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+}
+main {
+  background-color: yellow;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*Versió Escriptori*/
+@media (min-width: 768px) {
+  main {
+    background-color: #222;
+    display: flex;
+  }
+  .sub3 {
+    width: 65%;
+    margin: 0 1rem 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .sub4 {
+    width: 35%;
+  }
+  .el1 {
+    width: 15%;
+  }
+  .el2 {
+    width: 70%;
+    margin: 0 1rem;
+  }
+  .el3 {
+    width: 15%;
+  }
+  .el5 {
+    width: 49%;
+  }
+}
+/*Versió Tauleta*/
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .sub3 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .el1 {
+    width: 15%;
+  }
+  .el2 {
+    width: 70%;
+    margin: 0 1rem 0;
+  }
+  .el3 {
+    width: 15%;
+  }
+  .el5 {
+    width: 49%;
+  }
+}
+/*Versió Mobile*/
+@media only screen and (max-width: 600px) {
+  .sub1 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* display: block; */
+    /* height: 600px; */
+  }
+  .el1,
+  .el2 {
+    margin: 0 0 1rem;
+  }
+  .sub3 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .el5 {
+    width: 100%;
+  }
+}
+
+.sub {
+  /* height: 1rem; */
+  background-color: #555;
+  padding: 1rem;
+}
+.sub1 {
+  /* box-sizing: border-box; */
+  display: flex;
+  margin: 0 0 1rem 0;
+}
+.sub2 {
+  background-color: rgb(204, 151, 65);
+}
+.sub3 {
+  background-color: #555;
+  /* width: 65%; */
+}
+.sub4 {
+  background-color: rgb(187, 59, 59);
+  /* width: 35%; */
+}
+.sub5 {
+  background-color: #d3b245;
+  height: 1rem;
+}
+.el1,
+.el2,
+.el3 {
+  height: 1rem; /*posem un height perquè no tenen contingut i si no no es veurien*/
+  background-color: rgb(187, 83, 83);
+}
+
+.el4 {
+  height: 1rem;
+  width: 100%;
+  background-color: rgb(235, 213, 115);
+}
+.el5 {
+  background-color: rgb(57, 94, 186);
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+.el6 {
+  height: 1rem;
+  background-color: rgb(1, 167, 167);
+  width: 100%; /*si no posava aquest width no m'apareixia la caixa, potser perque he fet flex wrap en la contenidora?*/
+}
+.el7 {
+  height: 1rem;
+  background-color: rgb(235, 213, 115);
+  margin-bottom: 1rem;
+}
